@@ -3,6 +3,10 @@ const { default: mongoose } = require('mongoose');
 const cors = require('cors')
 const {uri} = require('./config/config');
 const route = require('./routes/routes');
+const dotenv = require("dotenv");
+
+dotenv.config({path:"config.env"})
+const PORT = process.env.PORT || 3005;
 
 const app = express();
 
@@ -18,6 +22,9 @@ mongoose.connect(uri,{useNewUrlParser:true,useUnifiedTopology:true})
 
 app.use('/', route)
 
-app.listen(3005, ()=>{
+if ( process.env.NODE_ENV = "production") {
+    app.use(express.static("client/build")) ;
+}
+app.listen(PORT, ()=>{
     console.log("app listening");
 })
