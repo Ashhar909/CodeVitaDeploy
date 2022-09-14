@@ -2,7 +2,7 @@
   "name": "codevitaback",
   "version": "1.0.0",
   "engines": {
-    "node": "14x"
+    "node": "14.17.3"
   },
   "description": "Backend Codevita",
   "main": "index.js",
