@@ -1,6 +1,9 @@
 {
   "name": "codevitaback",
   "version": "1.0.0",
+  "engines": {
+    "node": "14x"
+  },
   "description": "Backend Codevita",
   "main": "index.js",
   "scripts": {
